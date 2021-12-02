@@ -1,18 +1,12 @@
-### Local Similarity Pattern and Cost Self-Reassembling for Deep Stereo Matching Networks  
+### AAAI-2022 Paper: Local Similarity Pattern and Cost Self-Reassembling for Deep Stereo Matching Networks  
 
 
 #### Dependencies：
-
 - Python 3.6
-
 - PyTorch 1.7.0
-
 - torchvision 0.3.0
-
 - [SceneFlow](https://lmb.informatik.uni-freiburg.de/resources/datasets/SceneFlowDatasets.en.html)
-
 - [KITTI stereo 2015](http://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=stereo)
-
 - [KITTI stereo 2012](http://www.cvlibs.net/datasets/kitti/eval_stereo_flow.php?benchmark=stereo)
 
   
