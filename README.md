@@ -1,6 +1,6 @@
 ### Local Similarity Pattern and Cost Self-Reassembling for Deep Stereo Matching Networks  
 
-<img src="figure/figure.png" width="70%" height="50%">
+<img src="figure/figure.png" width="60%" height="50%">
 
 #### Dependencies：
 - Python 3.6
