@@ -2,6 +2,10 @@
 
 <img src="figure/figure.png" width="60%" height="50%">
 
+### Introduction
+- A novel pairwise feature LSP to extract structural information, which is beneficial for accurate matching especially when the illumination of the image pair is imbalanced
+- A novel disparity refinement method CSR (or DSR) to deal with outliers that are difficult to match, e.g. disparity discontinuities and occluded regions.
+
 #### Dependencies：
 - Python 3.6
 - PyTorch 1.7.0
