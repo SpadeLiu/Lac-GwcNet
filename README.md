@@ -9,6 +9,7 @@
 - [KITTI stereo 2015](http://www.cvlibs.net/datasets/kitti/eval_scene_flow.php?benchmark=stereo)
 - [KITTI stereo 2012](http://www.cvlibs.net/datasets/kitti/eval_stereo_flow.php?benchmark=stereo)
 
+![imggg](architecture/architecture2.pdf)
   
 
 #### Training on SceneFlow
