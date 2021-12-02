@@ -1,6 +1,6 @@
-### AAAI-2022 Paper: Local Similarity Pattern and Cost Self-Reassembling for Deep Stereo Matching Networks  
+### Local Similarity Pattern and Cost Self-Reassembling for Deep Stereo Matching Networks  
 
-![imggg](figure/figure.png)
+<img src="figure/figure.png" width="70%" height="50%">
 
 #### Dependencies：
 - Python 3.6
@@ -22,18 +22,3 @@ python train.py --data_path (your Scene Flow data folder)
 ```bash
 python KITTI_ft.py --data_path (your KITTI training data folder) --load_path (the path of the model trained on SceneFlow)
 ```
-
-#### Evaluation on SceneFlow
-
-```bash
-python test_sceneflow.py --load_path (the path of the model trained on Scene Flow) 
-```
-
-#### Evaluation on KITTI
-
-```bash
-python test_kitti.py --load_path (the path of the model finetuned on KITTI) 
-```
-
-
-
