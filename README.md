@@ -27,4 +27,4 @@ python train.py --data_path (your Scene Flow data folder)
 python KITTI_ft.py --data_path (your KITTI training data folder) --load_path (the path of the model trained on SceneFlow)
 ```
 #### Pretrained Models
-[Google Drive](https://drive.google.com/drive/folders/1Ud9-HpHSXE5qMRQ17Fs8BNLfyE2VW03U?usp=sharing)
+[Google Drive](https://drive.google.com/drive/folders/1m6aCGBYTgTLLT0GmTimhJs8Iv8RnNb5L?usp=sharing)
