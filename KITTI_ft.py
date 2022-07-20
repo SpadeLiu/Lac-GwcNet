@@ -111,7 +111,7 @@ def test(imgL, imgR, disp_true):
         imgL, imgR, disp_true = imgL.cuda(), imgR.cuda(), disp_true.cuda()
 
     with torch.no_grad():
-        pred_disp = model(imgL, imgR)
+        pred_disp = model(imgL, imgR, disp_true)
 
     final_disp = pred_disp.cpu()
     true_disp = disp_true
