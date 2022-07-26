@@ -16,9 +16,9 @@ import loss_functions as lf
 
 parser = argparse.ArgumentParser(description='LaC')
 parser.add_argument('--no_cuda', action='store_true', default=False)
-parser.add_argument('--gpu_id', type=str, default='0, 1')
+parser.add_argument('--gpu_id', type=str, default='1')
 parser.add_argument('--seed', type=int, default=0)
-parser.add_argument('--batch_size', type=int, default=4)
+parser.add_argument('--batch_size', type=int, default=1)
 parser.add_argument('--epoch', type=int, default=300)
 parser.add_argument('--data_path', type=str, default='/media/data/dataset/KITTI/data_scene_flow/training/')
 parser.add_argument('--KITTI', type=str, default='2015')
@@ -107,11 +107,11 @@ def test(imgL, imgR, disp_true):
     imgL = torch.FloatTensor(imgL)
     imgR = torch.FloatTensor(imgR)
 
-    if args.cuda:
-        imgL, imgR, disp_true = imgL.cuda(), imgR.cuda(), disp_true.cuda()
-
+    if cuda:
+        imgL, imgR = imgL.cuda(), imgR.cuda()
+    
     with torch.no_grad():
-        pred_disp = model(imgL, imgR, disp_true)
+        pred_disp = model(imgL, imgR, torch.zeros_like(disp_true).cuda())
 
     final_disp = pred_disp.cpu()
     true_disp = disp_true
@@ -145,11 +145,11 @@ def main():
         total_test_loss = 0
         adjust_learning_rate(optimizer, epoch)
 
-        for batch_id, (imgL, imgR, disp_L) in enumerate(tqdm(trainLoader)):
-            train_loss = train(imgL, imgR, disp_L)
-            total_train_loss += train_loss
-        avg_train_loss = total_train_loss / len(trainLoader)
-        print('Epoch %d average training loss = %.3f' % (epoch, avg_train_loss))
+        # for batch_id, (imgL, imgR, disp_L) in enumerate(tqdm(trainLoader)):
+        #     train_loss = train(imgL, imgR, disp_L)
+        #     total_train_loss += train_loss
+        # avg_train_loss = total_train_loss / len(trainLoader)
+        # print('Epoch %d average training loss = %.3f' % (epoch, avg_train_loss))
 
         for batch_id, (imgL, imgR, disp_L) in enumerate(tqdm(testLoader)):
             test_loss = test(imgL, imgR, disp_L)
